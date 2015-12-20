@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+<head>
+	<title></title>
+<style type="text/css">
+	
+table {
+  border: 1px solid #666;   
+    width: 100%;
+}
+th {
+  background: #f8f8f8; 
+  font-weight: bold;    
+    padding: 2px;
+}
+</style>
+
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+
+</head>
+<body>
+<h1>Books in the Library</h1>
+        
+ 
+<div ng-app="myApp">
+<div ng-controller="BookCtrl">
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="addBook()">Click here to Add Book</button>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Quantity</th>
+    </tr>
+    <tr ng-repeat="book in books">
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.type}}</td>
+        <td>{{book.quantity}}</td>
+    </tr>
+</table>
+</div>
+</div>
+        
+</body>
+</html>
+
